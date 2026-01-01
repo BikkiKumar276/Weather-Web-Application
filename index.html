@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather made by Bikki & Ateesh</title>
+  <link rel="stylesheet" href="stylee.css">
+  <link rel="icon" href="Logo.png">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="Logo.png" alt="Logo">
+      <h1>Weather <br>
+        <p id="inner-logo">made by BIKKI & ATEESH</p>
+      </h1>
+    </div>
+    <div class="search-container">
+      <input type="text" id="inputBtn" placeholder="Search...">
+      <button type="submit" id="button"><img src="searchButton.png" alt="404"></button>
+    </div>
+    <button id="toggleButton"><img src="dark-mode.png" alt="404"></button>
+  </nav>
+  <main>
+    <div class="hero-sec">
+      <div class="left-sec">
+        <div class="weatherIcon">
+          <img id="tempImg" src="foggyEmoji.png" alt="404">
+        </div>
+        <h1 id="tempInfo"></h1>
+        <div class="cityInfo">
+          <h2 id="cityName"></h2>
+          <img src="country.png" alt="">
+          <h3 id="countryName"></h3>
+        </div>
+      </div>
+      <div class="right-sec">
+        <div class="humidity info">
+          <img src="humidity.png" alt="404">
+          <h2>Humidity : <span id="humi"></span></h2>
+        </div>
+        <div class="windSpeed info">
+          <img src="wind.png" alt="404">
+          <h2>Wind Speed : <span id="wind"></span></h2>
+        </div>
+        <div class="feelLike info">
+          <h2>pressure : <span id="pressure"></span></h2>
+        </div>
+        <div class="sunrise info">
+          <img src="sunrise.png" alt="404">
+          <h2>Sunrise : <span id="rise"></span></h2>
+        </div>
+        <div class="sunset info">
+          <img src="sunset.png" alt="404">
+          <h2>Sunset : <span id="set"></span></h2>
+        </div>
+      </div>
+    </div>
+    <!-- About the Weather Web and some facts. -->
+    <div class="about-weather">
+      <h1>Latest News (<span id="resulCount"></span> Result)</h1>
+      <div class="newsSearch">
+        <input type="text" id="newsInput" placeholder="Search News...">
+        <button type="submit" id="newsBtn"><img src="searchButton.png" alt="404"></button>
+      </div>
+      <div class="box">
+        <img id="newsImg" src="" alt="">
+        <h2 id="title"></h2>
+        <h3 id="author"></h3>
+        <p id="desc"></p>
+        <button id="moreInfo"><a href="" id="url"></a></button>
+      </div>
+      <button id="prevPage">Prev</button>
+      <button id="nextPage">Next</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Weather App. All rights reserved.</p>
+    <p>Created by BIKKI</p>
+    <p>Email : mrbikkikumar276@gmail.com</p>
+    <p>link : <a href="https://www.linkedin.com/in/bikkikumar276/">LinkedIn</a> | <a
+        href="https://www.instagram.com/bikki_kumar_276/">Instagram</a> | <a
+        href="https://www.facebook.com/profile.php?id=100070180325153">Facebook</a></p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>

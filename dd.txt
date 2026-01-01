@@ -1,0 +1,38 @@
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '0fcbb9874fmsh2cf5339ae57e290p140875jsndda35453320d',
+		'x-rapidapi-host': 'weather-api138.p.rapidapi.com'
+	}
+};
+
+const getWeather = (city_name) => {
+cityName.innerHTML = city_name;
+	fetch('https://weather-api138.p.rapidapi.com/weather?city_name=' + city_name, options)
+		.then(response => response.json())
+		.then((response) => {
+			console.log(response);
+			temp.innerHTML = response.main.temp;
+			Temp.innerHTML = response.main.temp;
+			timeZone.innerHTML = response.timezone;
+			pressure.innerHTML = response.main.pressure;
+			feelsLike.innerHTML = response.main.feels_like;
+			Humidity.innerHTML = response.main.humidity;
+			humidity.innerHTML = response.main.humidity;
+			windSpeed.innerHTML = response.wind.speed;
+			wind.innerHTML = response.wind.speed;
+			Country.innerHTML = response.sys.country;
+			Sunrise.innerHTML = new Date(response.sys.sunrise * 1000).toLocaleTimeString();
+			Sunset.innerHTML = new Date(response.sys.sunset * 1000).toLocaleTimeString();
+		})
+		.catch(err => console.error(err));
+}
+
+	const button = document.getElementById("button");  
+	const city_name = document.getElementById("inputCity");     
+
+	button.addEventListener("click", (e) => {
+		e.preventDefault();  
+		getWeather(city_name.value); 
+	});
+
