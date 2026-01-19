@@ -74,7 +74,7 @@ modeToggle.addEventListener("click", () => {
         }
 });
 
-let currentQuery = "weather";
+let currentQuery = "everything";
 let currentPage = 1;
 const fetchNews = async (page, q) => {
         var url = 'https://newsapi.org/v2/everything?' +
