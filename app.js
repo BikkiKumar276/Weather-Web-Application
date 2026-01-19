@@ -77,14 +77,14 @@ modeToggle.addEventListener("click", () => {
 let currentQuery = "weather";
 let currentPage = 1;
 const fetchNews = async (page, q) => {
-        var url = 'https://newsapi.org/v2/top-headlines?country=us' +
+        var url = 'https://newsapi.org/v2/everything?' +
                 'q=' +q+
-                '&from=2025-11-09&' +
+                '&from=2026-01-17&' +
                 'pageSize=16&' +
                 'language=en&' +
                 'page=' + page +
                 '&sortBy=popularity&' +
-                'apiKey=bff92e5808444773bd1da4ca7dbe7a20';
+                'apiKey=572af036dc1944db923c747659088a26';
 
         var req = new Request(url);
 
@@ -102,7 +102,7 @@ const fetchNews = async (page, q) => {
           <img id="newsImg" src="${item.urlToImage}" alt="">
           <h2 id="title">${item.title.slice(0,50)}...</h2>
           <h3 id="author">${item.author}</h3>
-          <p id="desc">${item.description.slice(0,150)}...</p>
+          <p id="desc">${item.description}...</p>
           <button id="moreInfo"><a href="${item.url}">Read More</a></button>
         </div>`
         }
